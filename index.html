@@ -15,79 +15,49 @@
   <title>Frontend Mentor | Memory game</title>
 </head>
 <body>
-<main id="main">
-  <!-- Game setup start -->
-<div class="title"><h1 id="title">memory</h1></div>
-  <section id="maingroup">
-    <div class="grp">
-      <div class="topic">Select Theme</div>
-      <div class="buttons">
-    <button class="button1">Numbers</button>
-    <button class="button1">Icons</button></div></div>
+<section id="options-popup" >
+	<h1>Memory Game</h1>
+	<div class="form-section">
+		<label for="player-select">Number of players:</label>
+		<select id="player-select">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+		</select>
 
-    <div class="grp">
-  <div class="topic">Number of Players</div>
-  <div class="buttons">
-    <button class="button2">1</button>
-    <button class="button2">2</button>
-    <button class="button2">3</button>
-    <button class="button2">4</button></div></div>
+		<label for="size-select">Board size:</label>
+		<select id="size-select">
+			<option value="4">4x4</option>
+			<option value="6">6x6</option>
+		</select>
 
-  <div class="grp">
-    <div class="topic">Grid Size</div>
-    <div class="buttons">
-    <button class="button1">4x4</button>
-    <button class="button1">6x6</button></div></div>
+		<label for="type-select">Card type:</label>
+		<select id="type-select">
+			<option value="number">Numbers</option>
+			<option value="icon">Icons</option>
+		</select>
 
-  <div class="start"><button class="button3">Start Game</button>
-  </div>
-  </section>
-
-  <!-- Game setup end -->
-
-  <!-- Game board start -->
-
-  <section id="section2">
-  <button class="button4"> Restart</button>
-  <button class="button4"> New Game</button>
-  <button class="button4"> Resume Game</button> 
+		<button id="startButton" onclick="startGame()">Start Game</button>
+	</div>
 </section>
 
-  <!-- Multiplayer scores start -->
+	<section id="game-state">
+		<div id="toprow">
+			<div class="memoryheader">memory</div>
+			<button class="menu">menu</button>
+		</div>
+	<div id="game-board"></div>
+	<div id="score-board"></div>
+	</section>
 
-  Player 1
-  <!-- P1 score -->
-  Current Turn
-
-  Player 2
-  <!-- P2 score -->
-  Current Turn
-
-  Player 3
-  <!-- P3 score -->
-  Current Turn
-
-  Player 4
-  <!-- P4 score -->
-  Current Turn
-
-  <!-- Multiplayer scores start -->
-
-  <!-- Solo game time and moves counter start -->
-
-  <div id="grpbottom">
-  <div class="grpbottom1"> <div class="grpinside"><p class="stext">Time</p></div>
-  <!-- Time elapsed -->
-</div>
-
-<div class="grpbottom1"><div class="grpinside"><p class="stext">Moves</p><p class="stext">Moves</p></div>
-  <!-- Moves total -->
-</div>
-  </div>
-  <!-- Solo game time and moves counter end -->
-
-  <!-- Game board end -->
-
-</main>
+	<section id="result-popup" class="hide">
+		<h2 id="results-title"></h2>
+		<div id="scores"></div>
+		<div class="next">
+		<button id="restart-btn" class="button1">Restart Game</button>
+		<button id="newgame-btn" class="button1">Setup New Game</button>
+	</div>
+	</section>
 </body>
 </html>
